@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peter Crone - Digital Twin</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div class="chat-container">
+      <div class="header">
+        <!-- Centered "AI" text within the circle -->
+        <svg height="24" width="24" viewBox="0 0 22 22" fill="#fff" style="margin-right:8px">
+          <circle cx="11" cy="11" r="12" fill="#222F3D" />
+          <text
+            x="50%"
+            y="50%"
+            fill="#fff"
+            text-anchor="middle"
+            alignment-baseline="middle"
+            font-size="12"
+            font-family="Inter"
+          >AI</text>
+        </svg>
+        <div>
+          <h2 class="user-name">Peter Crone</h2>
+          <!-- Making consistent with messaging styles -->
+          <h3 class="user-title">Digital Twin</h3>
+        </div>
+        <span class="status" id="status"></span>
+      </div>
+      <div class="messages" id="messages"></div>
+      <div class="input-bar">
+
+        <div class="speed-control" style="display: none;">
+          <input type="range" id="speedSlider" min="0" max="100" value="100">
+          <div class="speed-labels">
+            <span>Fast</span>
+            <span>Slow</span>
+          </div>
+        </div>
+
+        <br>
+
+        <button id="startBtn" title="Start voice chat" class="btn start-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5L8 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 5L18 12L8 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          &nbsp;&nbsp;
+          Start Conversation
+        </button>
+        
+        <button id="stopBtn" title="Stop voice chat" class="btn stop-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        
+        <button id="clearBtn" title="Reset conversation" class="btn reset-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C14.8273 3 17.35 4.30367 19 6.34267" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M14.5 6.5L19.5 6.5L19.5 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button> 
+
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
